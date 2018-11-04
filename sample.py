@@ -17,7 +17,7 @@ optional arguments:
   -c, --only_cpu        if set, only build weights on cpu
 """
 
-from __future__ import print_function
+# from __future__ import print_function
 
 import utils
 from model import SeqGAN
