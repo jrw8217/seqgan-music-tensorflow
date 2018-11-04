@@ -498,11 +498,11 @@ class SeqGAN(object):
         self.train_op = tf.group(gan_train_op, step_op)
 
         # Creates the log directory and saving objects.
-        if self.logdir is None:
-            self.logdir = tempfile.mkdtemp()
-            sys.stdout.write('logdir: "%s"\n' % self.logdir)
+        # if self.logdir is None:
+        #     self.logdir = tempfile.mkdtemp()
+        #     sys.stdout.write('logdir: "%s"\n' % self.logdir)
         self.summary_writer = tf.summary.FileWriter(
-            self.logdir, self._sess.graph)
+            '/log', self._sess.graph)
         self.summary_op = tf.summary.merge_all()
 
         self._saver = tf.train.Saver()

@@ -1,9 +1,9 @@
 """Some utils to help with text parsing / feeding to the model."""
 
-from __future__ import division
+# from __future__ import division
 
 import os
-import cPickle as pkl
+import pickle as pkl
 import logging
 
 import numpy as np

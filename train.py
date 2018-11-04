@@ -17,7 +17,7 @@ lorem ipsum text. The character frequencies in this text are as follows:
 'e' -> 5643		' ' -> 8998
 """
 
-from __future__ import print_function
+# from __future__ import print_function
 
 import utils
 from model import SeqGAN
@@ -71,8 +71,8 @@ if __name__ == '__main__':
     model.build()
     model.load(ignore_missing=True)
 
-    for epoch in xrange(1, args.num_epochs + 1):
-        for step in xrange(1, args.num_steps + 1):
+    for epoch in range(1, args.num_epochs + 1):
+        for step in range(1, args.num_steps + 1):
             logging.info('epoch %d, step %d', epoch, step)
             model.train_batch(iterator.next())
 
